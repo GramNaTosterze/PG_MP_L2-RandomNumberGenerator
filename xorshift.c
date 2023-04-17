@@ -26,7 +26,7 @@ unsigned int xorshift() {
 		bool bt = b[i-p]^b[i-q];
 		b[i] = bt;
 	}
-	unsigned int ret = binToDec(b,32);
+	unsigned int ret = binToDec(b,intSize);
 	for (int i = 0; i < p; i++)
 		b[i] = b[25 + i];
 	return ret;
